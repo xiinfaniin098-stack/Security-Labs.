@@ -115,3 +115,61 @@ rm logs/network_traffic.log
 rmdir reports
 rm -r reports
 ls
+git --version
+git config --list
+ls -al ~/.ssh
+ls
+git config --global "mohamed_abdullahi"
+git config --global user.name "mohamed_abdullahi"
+git config --global user.email "xiinfaniin098@gmail.com"
+ssh-keygen -t ed25519 -C "xiinfaniin098@gmail.com"
+ls -al ~/.ssh
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+git remote -v
+git init
+git add  .
+git commit -m "First push of my security lab files"
+git branch -M main
+git remote add origin git@github.com:xiinfaniin098-stack/Security-Labs.git
+git push -u origin main
+git remote remove origin
+git remote add origin git@github.com:xiinfaniin098-stack/Security-Labs.git
+git push -u origin main
+git remote remove origin
+https://github.com/xiinfaniin098-stack/Security-Labs..git
+git remote add origin https://github.com/xiinfaniin098-stack/Security-Labs..git
+git push -u origin main
+push -u origin main
+git push -u origin main
+nmap --version
+which nmap
+ls
+sudo apt update && sudo apt install nmap -y
+nmap --version
+nmap scanme.nmap.org
+nmap Pn scanme.org
+nmap Pn -v scanme.nmap.org
+nmap -Pn scanme.nmap.org
+nmap -Pn -sV -p 22,80,443 scanme.org
+nmap -Pn localhost
+sudo apt update && sudo apt install tcpdump -y
+sudo tcpdump -c 5
+sudo groupadd developers
+sudo useradd -g developers fgarcia
+sudo mkdir /opt/new_project
+sudo chown fgarcia:developers /opt/new_project
+sudo usermod -a -G webmasters fgarcia
+sudo groupadd webmasters
+sudo usermod -a -G webmasters fgarcia
+groups fgarcia
+ls
+ls -la
+chmod u-d security_logs
+chomd u-x security_logs
+chmod u-x security_logs
+ls -la
+chmod u+D
+chmod u+x security_logs
+ls
+ls -la
