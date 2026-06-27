@@ -26,3 +26,20 @@ SELECT * FROM employees WHERE department = 'Finance' OR department = 'Sales';
 
 --Retrieve all employees not in IT
  SELECT * FROM employees WHERE NOT department = 'Information Technology';
+
+ SQL JOINS
+ --Task 1. Match employees to their machines
+SELECT * FROM machines;
+
+ --Task 1. Match employees to their machines
+SELECT * FROM machines INNER JOIN employees ON machines.device_id = employees.device_id;
+
+	LEFT JOIN and RIGHT JOIN
+ --Task 2. Return more data
+SELECT * FROM machines LEFT JOIN employees ON machines.device_id = employees.device_id;
+
+SELECT * FROM machines RIGHT JOIN employees ON machines.device_id = employees.device_id;
+
+--Task 3. Retrieve login attempt data
+SELECT * FROM employees INNER JOIN log_in_attempts ON  employees.username = log_in_attempts.username;
+
