@@ -1,21 +1,5 @@
 #!/bin/bash
 
---Task 1. Generate output with the echo command
-echo hello
-
-echo "hello"
-
-echo "Mohamed Abdullahi"
-
---Task 2. Generate output with the expr command
-expr 32 - 8
-
-expr 3500 * 12
-
---Task 3. Clear the Bash shell
-clear
-
-
 # Task 1. Ensure that APT is installed
 apt
 
@@ -36,4 +20,17 @@ apt list --installed
 
 
 
+--Task 1. Generate output with the echo command
+echo hello
 
+echo "hello"
+
+echo "Mohamed Abdullahi"
+
+--Task 2. Generate output with the expr command
+expr 32 - 8
+
+expr 3500 * 12
+
+--Task 3. Clear the Bash shell
+clear
