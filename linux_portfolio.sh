@@ -152,3 +152,192 @@ grep "Human Resources" Q4_added_users.txt
 # ------------------------------------------------------------------------------
 # End of Section
 # ------------------------------------------------------------------------------
+
+# ==============================================================================
+# SECTION 6: FILE SYSTEM MANIPULATION, DIRECTORY PROVISIONING & TEXT EDITING
+# Objective: Create, move, remove, and modify critical files and directories 
+#            while maintaining a verified audit trail using directory listings.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Task 1. Create a new directory
+# Context: Provisioning a dedicated directory to isolate and store newly generated
+#          system or application logs.
+# ------------------------------------------------------------------------------
+mkdir logs
+ls
+
+# ------------------------------------------------------------------------------
+# Task 2. Remove a directory
+# Context: Performing system cleanup by permanently deleting empty temporary 
+#          directories no longer required by the analyst environment.
+# ------------------------------------------------------------------------------
+rmdir temp
+ls
+
+# ------------------------------------------------------------------------------
+# Task 3. Move a file
+# Context: Navigating the home workspace to securely relocate patches and incident
+#          reports into the designated central reporting repository.
+# ------------------------------------------------------------------------------
+cd /home/analyst/notes
+mv Q3patches.txt /home/analyst/reports/
+ls /home/analyst/reports
+
+# ------------------------------------------------------------------------------
+# Task 4. Remove a file
+# Context: Securely deleting obsolete notes and temporary configuration items 
+#          to minimize clutter in active work zones.
+# ------------------------------------------------------------------------------
+rm tempnotes.txt
+ls
+
+# ------------------------------------------------------------------------------
+# Task 5. Create a new file
+# Context: Initializing a fresh text file via the touch command to begin logging
+#          completed baseline operations.
+# ------------------------------------------------------------------------------
+touch tasks.txt
+ls
+
+# ------------------------------------------------------------------------------
+# Task 6. Edit and view a file
+# Context: Launching the Nano editor to record procedural updates, clearing the
+#          viewport viewport, and printing the payload via standard output.
+# ------------------------------------------------------------------------------
+# Inside the editor, add the following text:
+# Completed tasks
+# 1. Managed file structure in /home/analyst
+
+nano tasks.txt
+clear
+cat tasks.txt
+
+# ------------------------------------------------------------------------------
+# End of Section
+# ------------------------------------------------------------------------------
+
+# ==============================================================================
+# SECTION 7: ACCESS CONTROL MANAGEMENT & FILE SYSTEM SYSTEM HARDENING
+# Objective: Audit, identify, and remediate loose file and directory permissions 
+#            to enforce the Principle of Least Privilege (PoLP).
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Task 1. Check file and directory details
+# Context: Performing a detailed long-format directory listing, including hidden 
+#          system files, to map out existing user, group, and other permissions.
+# ------------------------------------------------------------------------------
+cd projects
+ls -l
+ls -la
+
+# ------------------------------------------------------------------------------
+# Task 2. Change file permissions
+# Context: Removing unauthorized write permissions from 'others' on project_k.txt
+#          and stripping read permissions from the 'group' on project_m.txt.
+# ------------------------------------------------------------------------------
+ls -l
+chmod o-w project_k.txt
+ls -l
+chmod g-r project_m.txt
+
+# ------------------------------------------------------------------------------
+# Task 3. Change file permissions on a hidden file
+# Context: Modifying a hidden configuration/project file to strip owner and group 
+#          write permissions while extending group read access.
+# ------------------------------------------------------------------------------
+ls -la
+chmod u-w,g-w,g+r .project_x.txt
+
+# ------------------------------------------------------------------------------
+# Task 4. Change directory permissions
+# Context: Hardening the 'drafts' directory by removing group execute (traversal) 
+#          rights to secure sensitive preliminary data.
+# ------------------------------------------------------------------------------
+ls -l 
+chmod g-x drafts
+
+# ------------------------------------------------------------------------------
+# End of Section
+# ------------------------------------------------------------------------------
+
+# ==============================================================================
+# SECTION 8: IDENTITY & ACCESS MANAGEMENT (IAM) AND ACCOUNT PROVISIONING
+# Objective: Administer user lifecycles, modify primary/supplementary groups, 
+#            and reassign asset ownership according to internal security policies.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Task 1. Add a new user
+# Context: Creating a new system account for personnel onboarding and assigning 
+#          them directly to their designated primary research department group.
+# ------------------------------------------------------------------------------
+sudo useradd researcher9 -g research_team
+
+# ------------------------------------------------------------------------------
+# Task 2. Assign file ownership
+# Context: Explicitly modifying asset permissions via chown to ensure only the 
+#          assigned researcher holds administrative ownership of project data.
+# ------------------------------------------------------------------------------
+sudo chown researcher9 /home/researcher2/projects/project_r.txt
+
+# ------------------------------------------------------------------------------
+# Task 3. Add the user to a secondary group
+# Context: Appending a supplementary group membership to grant cross-departmental 
+#          access without overwriting the user's primary group structural alignment.
+# ------------------------------------------------------------------------------
+sudo usermod -a -G sales_team researcher9
+
+# ------------------------------------------------------------------------------
+# Task 4. Delete a user
+# Context: Offboarding personnel by completely purging the user account and 
+#          associated distinct groups from the system to mitigate stale account risks.
+# ------------------------------------------------------------------------------
+sudo userdel researcher9
+sudo groupdel researcher9
+
+# ------------------------------------------------------------------------------
+# End of Section
+# ------------------------------------------------------------------------------
+
+# ==============================================================================
+# SECTION 9: SHELL DOCUMENTATION AUDITING & IN-SYSTEM COMMAND DISCOVERY
+# Objective: Utilize built-in help facilities, manual pages, and keyword indexing
+#            to research command syntax, options, and operational differences.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Task 1. Learn more about commands
+# Context: Querying brief descriptions via whatis, opening the core reference manual 
+#          via man, and performing keyword searches to isolate tools handling files.
+# ------------------------------------------------------------------------------
+whatis cat
+man cat
+apropos -a "first part file"
+
+# ------------------------------------------------------------------------------
+# Task 2. Explore the useradd command
+# Context: Loading the full reference manual page for account provisioning tools 
+#          to audit available flags, configuration variables, and default switches.
+# ------------------------------------------------------------------------------
+man useradd
+
+# ------------------------------------------------------------------------------
+# Task 3. Explore the rm and rmdir commands
+# Context: Executing side-by-side brief definition lookups to isolate differences 
+#          between file unlinking tools and empty directory deletion utilities.
+# ------------------------------------------------------------------------------
+whatis rm
+whatis rmdir
+
+# ------------------------------------------------------------------------------
+# Task 4. Determine which command to use
+# Context: Conducting a precise multi-keyword index search via apropos to isolate 
+#          the exact system administrative command required to establish a new group.
+# ------------------------------------------------------------------------------
+apropos -a create new group
+
+# ------------------------------------------------------------------------------
+# End of Section
+# ------------------------------------------------------------------------------
