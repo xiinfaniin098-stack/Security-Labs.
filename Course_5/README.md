@@ -1,4 +1,4 @@
-[15:44, 16/07/2026] Mohamed: # Security Operations Center (SOC) Practical Labs
+[15:44, 16/07/2026] Mohamed Abdullahi Yussuf: # Security Operations Center (SOC) Practical Labs
 
 Welcome to my security portfolio. This repository documents my hands-on technical labs focusing on system administration, database security, and cryptography.
 
