@@ -54,3 +54,9 @@ Generate cryptographic SHA-256 hash values for two files to analyze their integr
    ```bash
    cat file1.txt
    cat file2.txt
+   ```
+   ### Proof of Completion
+
+Below is the screenshot showing the generation and comparison of the file hashes:
+
+![Hash Values Success](images/create_hash_values.png)
