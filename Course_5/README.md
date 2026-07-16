@@ -38,4 +38,4 @@ To decrypt an intercepted ciphertext file using standard command-line tools and 
 ### Proof of Completion
 Below is the screenshot confirming the successful decryption and key recovery:
 
-![Decryption Success](images/caesar_decryption_success.png)
+![Decryption Success](images/caesar_decrytion_success.png)
