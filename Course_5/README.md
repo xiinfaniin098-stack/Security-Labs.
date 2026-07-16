@@ -39,3 +39,18 @@ To decrypt an intercepted ciphertext file using standard command-line tools and 
 Below is the screenshot confirming the successful decryption and key recovery:
 
 ![Decryption Success](images/caesar_decrytion_success.png)
+
+---
+
+## Lab 2: Generating and Verifying Hash Values
+
+### Objective
+Generate cryptographic SHA-256 hash values for two files to analyze their integrity and determine if any data differences exist between them.
+
+### Step-by-Step Execution
+
+1. *List and Examine the Target Files*
+   Using ls to locate the files, and cat to read their content:
+   ```bash
+   cat file1.txt
+   cat file2.txt
