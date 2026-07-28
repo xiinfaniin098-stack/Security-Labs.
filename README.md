@@ -20,8 +20,9 @@ Welcome to my security portfolio. This repository documents my hands-on technica
 * *Objective:* Decrypting intercepted files and recovering cryptographic keys.
 * *Folder:* [Course_5](./Course_5)
 * *Skills:* Symmetric encryption, Caesar ciphers, OpenSSL.
+
+### 🚨 **4. Detection & Incident Response (Course 6)**
+* **Objective:** Network traffic monitoring, SIEM log analysis, and incident response.
+* **Folder:** `Course_6` *(In Progress)*
+* **Skills:** Incident handling, network analysis, IDS logs, SIEM tools.
 *
-🚨 4. Detection & Incident Response (Course 6)
-• Objective: Network traffic monitoring, SIEM log analysis, and incident response.
-• Folder: Course_6 (In Progress)
-• Skills: Incident handling, network analysis, IDS logs, SIEM tools.
