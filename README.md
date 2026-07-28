@@ -25,4 +25,4 @@ Welcome to my security portfolio. This repository documents my hands-on technica
 * **Objective:** Network traffic monitoring, SIEM log analysis, and incident response.
 * **Folder:** `Course_6` *(In Progress)*
 * **Skills:** Incident handling, network analysis, IDS logs, SIEM tools.
-*
+
