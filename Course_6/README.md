@@ -17,13 +17,13 @@ In this practical lab, I performed network packet capture analysis using **Wires
 
 ## 🔍 Key Investigations & Findings
 
-### 1. Packet Structure & Header Inspection
-By examining the expanded subtrees of captured frames, I analyzed deep packet headers:
-* **Time to Live (TTL):** Identified a TTL value of **54** in the IPv4 header.
-* **Frame Length:** Verified total frame size of **54 bytes** (592 bits on wire).
-* **IPv4 Header Length:** Verified standard IPv4 header size of **20 bytes**.
+### 1. Explore Data with Wireshark
+In this task, I opened the sample packet capture file and learned to navigate the core Wireshark interface:
+* **Interface Navigation:** Examined captured packets using the **Protocol**, **Length**, and **Info** columns.
+* **Visual Classification:** Observed Wireshark's default coloring rules to quickly differentiate traffic types (such as light blue for DNS and green for HTTP/TCP).
+* **Protocol Identification:** Navigated the packet list to identify **ICMP** as the protocol used for "Echo (ping) request" traffic.
 
-![Packet Inspection Details](./Screenshot%202026-08-01%20133730.png)
+![Exploring Wireshark Data](./Screenshot%202026-08-01%20133730.png)
 
 ---
 
