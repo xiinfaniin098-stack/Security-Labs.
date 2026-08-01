@@ -30,7 +30,7 @@ In this task, I opened the sample packet capture file and learned to navigate th
 ### 2. DNS Resolution Analysis
 Using `udp.port == 53`, I located DNS standard queries and responses resolving domain requests.
 
-![DNS Filtering Verification](./Screenshot%202026-08-01%20134354.png)
+![DNS Filtering Verification](./Screenshot%202026-08-01%20134305.png)
 
 ---
 
