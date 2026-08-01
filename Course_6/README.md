@@ -33,11 +33,10 @@ Using `ip.addr == 142.250.1.139`, I isolated all network communication (ICMP ech
 ![IP Filtering Verification](./Screenshot%202026-08-01%20134306.png)
 ---
 
-### 3. MAC Address & Protocol Verification
-Using `eth.addr == 42:01:ac:15:e0:02`, I inspected the encapsulation layer to confirm packet details.
+### 3. Frame & Encapsulation Inspection
+Using `ip.addr == 142.250.1.139`, I inspected Frame 64 packet details to analyze TCP payload encapsulation and protocol headers.
 
-![MAC Filtering Verification](./Screenshot%202026-08-01%20EXACT_MAC_FILENAME.png)
-
+![Frame Details Verification](./Screenshot%202026-08-01%20134428.png)
 ---
 
 ## 🛠️ Skills Demonstrated
