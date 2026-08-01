@@ -45,4 +45,4 @@ Using `eth.addr == 42:01:ac:15:e0:02`, I inspected the encapsulation layer to co
 * Packet capture (pcap) inspection and frame decoding
 * Layer 2 (Data Link) and Layer 3/4 (Network/Transport) header analysis
 * Isolating target traffic using precise Wireshark display filters
-*
+
