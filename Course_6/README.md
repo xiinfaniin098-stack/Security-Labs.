@@ -23,11 +23,21 @@ By examining the expanded subtrees of captured frames, I analyzed deep packet he
 * **Frame Length:** Verified total frame size of **54 bytes** (592 bits on wire).
 * **IPv4 Header Length:** Verified standard IPv4 header size of **20 bytes**.
 
+![Packet Inspection Details](./Screenshot%202026-08-01%20133730.png)
+
+---
+
 ### 2. DNS Resolution Analysis
 Using `udp.port == 53`, I located DNS standard queries and responses resolving the domain `opensource.google.com` to destination IP `142.250.1.139`.
 
+![DNS Filtering Verification](./Screenshot%202026-08-01%20134305.png)
+
+---
+
 ### 3. MAC Address & Protocol Verification
 Using `eth.addr == 42:01:ac:15:e0:02`, I inspected the encapsulation layer to confirm that the embedded transport payload inside the Ethernet frame was running **UDP / IPv4**.
+
+![MAC Filtering Verification](./Screenshot%202026-08-01%20134428.png)
 
 ---
 
