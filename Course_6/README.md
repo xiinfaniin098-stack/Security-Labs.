@@ -24,21 +24,21 @@ In this task, I opened the sample packet capture file and navigated the core Wir
 * **Visual Classification:** Observed Wireshark's default coloring rules to quickly differentiate traffic types.
 * **Protocol Identification:** Navigated the packet list to identify ICMP as the protocol used for Echo (ping) requests.
 
-![Explore Data](./Screenshot%202026-08-01%20133730.png)
+![Explore Data](./wireshark_unfiltered_packet_capture_overview.png)
 
 ---
 
 #### 2. IP Address Filtering & Analysis
 Using `ip.addr == 142.250.1.139`, I isolated all network communication (ICMP echo requests/replies and TCP traffic) sent to and from Google's server IP.
 
-![IP Filtering Verification](./Screenshot%202026-08-01%20134306.png)
+![IP Filtering Verification](./wireshark_ip_addr_filter_142_250_1_139.png)
 
 ---
 
 #### 3. Frame & Encapsulation Inspection
 Using `ip.addr == 142.250.1.139`, I inspected Frame 64 packet details to analyze TCP payload encapsulation and protocol headers.
 
-![Frame Details Verification](./Screenshot%202026-08-01%20134428.png)
+![Frame Details Verification](./wireshark_packet_64_tcp_syn_details.png)
 
 ---
 
