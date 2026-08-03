@@ -44,3 +44,4 @@ Using `ip.addr == 142.250.1.139`, I inspected Frame 64 packet details to analyze
 * Layer 2 (Data Link) and Layer 3/4 (Network/Transport) header analysis
 * Isolating target traffic using precise Wireshark display filters
 
+
