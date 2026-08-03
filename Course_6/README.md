@@ -1,47 +1,83 @@
-# Lab: Network Traffic Analysis & Packet Inspection with Wireshark
+# Course 6: Detection & Incident Response Practical Labs
 
-## 📌 Overview
-In this practical lab, I performed network packet capture analysis using **Wireshark**. I applied display filters to inspect IPv4, TCP, UDP, and DNS traffic, isolating specific IP/MAC addresses and analyzing packet headers to investigate network activity.
+Welcome to the Detection & Incident Response module documentation. This page contains hands-on analysis labs covering GUI-based network inspection using **Wireshark** and command-line traffic capture using **tcpdump**.
 
 ---
 
-## ⚙️ Key Display Filters Used
+## 🦈 Part 1: Network Traffic Analysis & Packet Inspection with Wireshark
+
+### 🎯 Overview
+In this practical lab, I performed network packet capture analysis using Wireshark. I applied display filters to inspect IPv4, TCP, UDP, and DNS traffic, isolating specific IP addresses and analyzing packet headers to investigate network activity.
+
+### 🔑 Key Display Filters Used
 | Protocol / Target | Wireshark Display Filter | Purpose |
 | :--- | :--- | :--- |
 | **IP Filtering** | `ip.addr == 142.250.1.139` | Isolates all traffic to/from Google's server IP |
-| **MAC Filtering** | `eth.addr == 42:01:ac:15:e0:02` | Tracks traffic associated with a specific network interface |
 | **DNS Traffic** | `udp.port == 53` | Filters DNS queries and domain name resolutions |
-| **HTTP Traffic** | `tcp.port == 80` | Filters standard unencrypted web traffic |
+| **TCP Traffic** | `tcp.port == 80` | Filters standard unencrypted web traffic |
 
----
+### 🔍 Key Investigations & Findings
 
-## 🔍 Key Investigations & Findings
-
-### 1. Explore Data with Wireshark
-In this task, I opened the sample packet capture file and learned to navigate the core Wireshark interface:
-* **Interface Navigation:** Examined captured packets using the **Protocol**, **Length**, and **Info** columns.
+#### 1. Explore Data with Wireshark
+In this task, I opened the sample packet capture file and navigated the core Wireshark interface.
+* **Interface Navigation:** Examined captured packets using Protocol, Length, and Info columns.
 * **Visual Classification:** Observed Wireshark's default coloring rules to quickly differentiate traffic types.
-* **Protocol Identification:** Navigated the packet list to identify **ICMP** as the protocol used for "Echo (ping) request" traffic.
+* **Protocol Identification:** Navigated the packet list to identify ICMP as the protocol used for Echo (ping) requests.
 
-![Exploring Wireshark Data](./Screenshot%202026-08-01%20133730.png)
+![Explore Data](./Screenshot%202026-08-01%20133730.png)
 
 ---
 
-### 2. IP Address Filtering & Analysis
+#### 2. IP Address Filtering & Analysis
 Using `ip.addr == 142.250.1.139`, I isolated all network communication (ICMP echo requests/replies and TCP traffic) sent to and from Google's server IP.
 
 ![IP Filtering Verification](./Screenshot%202026-08-01%20134306.png)
+
 ---
 
-### 3. Frame & Encapsulation Inspection
+#### 3. Frame & Encapsulation Inspection
 Using `ip.addr == 142.250.1.139`, I inspected Frame 64 packet details to analyze TCP payload encapsulation and protocol headers.
 
 ![Frame Details Verification](./Screenshot%202026-08-01%20134428.png)
+
 ---
 
-## 🛠️ Skills Demonstrated
-* Packet capture (pcap) inspection and frame decoding
-* Layer 2 (Data Link) and Layer 3/4 (Network/Transport) header analysis
-* Isolating target traffic using precise Wireshark display filters
+## 💻 Part 2: Capturing & Filtering Network Traffic with tcpdump
 
+### 🎯 Overview
+In this practical lab, I used `tcpdump` in Linux to identify active network interfaces, capture live packet data directly to a `.pcap` file, and apply command-line filters to analyze specific network traffic.
 
+### 🔍 Lab Execution & Proof
+
+#### 1. Identify Network Interfaces
+Inspected available interfaces using `ifconfig` and identified active capture interfaces with `sudo tcpdump -D`.
+
+![Identify Interfaces](./01-identify-interfaces.png)
+
+---
+
+#### 2. Inspect Live Traffic
+Captured live packet headers on `eth0` with detailed verbosity using `sudo tcpdump -i eth0 -v -c5`.
+
+![Inspect Traffic](./02-inspect-traffic.png)
+
+---
+
+#### 3. Capture Traffic to PCAP File
+Saved web packet traffic (TCP port 80) directly to a capture file using `sudo tcpdump -i eth0 -nn -c9 port 80 -w capture.pcap`.
+
+![Capture PCAP](./03-capture-pcap.png)
+
+---
+
+#### 4. Filter Captured Packet Data
+Read and filtered the saved `.pcap` file to analyze HTTP request details using `sudo tcpdump -nn -r capture.pcap -v`.
+
+![Filter PCAP](./04-filter-pcap.png)
+
+---
+
+## 🛠️ Summary of Skills Demonstrated
+* **GUI Packet Analysis:** Wireshark display filters, frame decoding, protocol header inspection.
+* **CLI Network Analysis:** Command-line packet capture with `tcpdump`, `.pcap` logging, syntax-based packet filtering.
+* **Traffic Isolation:** Filtering targeted IP addresses, ports, and protocols across both graphical and terminal interfaces.
