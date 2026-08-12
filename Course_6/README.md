@@ -1,6 +1,6 @@
 # Course 6: Detection & Incident Response Practical Labs
 
-Welcome to the Detection & Incident Response module documentation. This page contains hands-on analysis labs covering GUI-based network inspection using **Wireshark** and command-line traffic capture using **tcpdump**.
+Welcome to the Detection & Incident Response module documentation. This page contains hands-on analysis labs covering GUI-based network inspection using **Wireshark**, command-line traffic capture using **tcpdump**, and intrusion detection analysis using **Suricata**.
 
 ---
 
@@ -75,9 +75,25 @@ Read and filtered the saved `.pcap` file to analyze HTTP request details using `
 
 ![Filter PCAP](./04-filter-pcap.png)
 
+
 ---
+
+## Part 3: Intrusion Detection & Rule Analysis with Suricata
+
+### Overview
+In this practical lab, I configured and executed custom Suricata NIDS rules against packet captures to inspect signature logic, trigger security alerts, and analyze network telemetry.
+
+### Lab Execution & Proof
+
+#### 1. Examine Custom Suricata Rule
+Inspected `custom.rules` to analyze signature logic, HTTP method matching criteria, and rule metadata using `cat custom.rules`.
+![Examine Custom Rule](./suricata-task1-inspect-custom-rules.png)
+
+#### 2. Trigger Rule & Analyze Fast Log
+Executed Suricata against `sample.pcap` using `sudo suricata -r sample.pcap -S custom.rules -k none` and verified triggered security alerts with `cat /var/log/suricata/fast.log`.
+![Trigger Custom Rule](./suricata-task2-pcap-execution-and-fast-log.png)
 
 ## 🛠️ Summary of Skills Demonstrated
 * **GUI Packet Analysis:** Wireshark display filters, frame decoding, protocol header inspection.
 * **CLI Network Analysis:** Command-line packet capture with `tcpdump`, `.pcap` logging, syntax-based packet filtering.
-* **Traffic Isolation:** Filtering targeted IP addresses, ports, and protocols across both graphical and terminal interfaces.
+* **NIDS Rule Analysis:** Writing Suricata signature rules, processing offline captures, and analyzing `fast.log` alert outputs.
