@@ -30,9 +30,4 @@ Welcome to my security portfolio. This repository documents my hands-on technica
 * **Objective:** Developing Python algorithms to parse security log files, check device IDs, and manage IP allow lists.
 * **Folder:** [Course_7](./Course_7)
 * **Skills:** File I/O (`with open()`), String parsing (`.split()`), List manipulation (`.remove()`), and Conditional statements.
-
-#### Lab Screenshots:
-![Device ID Types](device_id_string_type.png)
-![Log File Parser](log_file_parser.py.png)
-![OS Patch Scheduler](os_patch_scheduler.py.png)
-![Python Read File Task 7](python_read_file_contents_task7.png)
+*
