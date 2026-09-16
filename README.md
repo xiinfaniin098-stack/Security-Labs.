@@ -25,3 +25,12 @@ Welcome to my security portfolio. This repository documents my hands-on technica
 • Objective: Network traffic monitoring, SIEM log analysis, and incident response.
 • Folder: [Course_6](./Course_6)
 • Skills: Incident handling, network analysis, IDS logs, SIEM tools.
+### 🐍 5. Automating Cybersecurity Tasks with Python (Course 7)
+* **Objective:** Developing Python algorithms to parse security log files, check device IDs, and manage IP allow lists.
+* **Skills:** File I/O (`with open()`), String parsing (`.split()`), List manipulation (`.remove()`), and Conditional statements.
+
+#### Lab Screenshots:
+![Device ID Types](device_id_string_type.png)
+![Log File Parser](log_file_parser.py.png)
+![OS Patch Scheduler](os_patch_scheduler.py.png)
+![Python Read File Task 7](python_read_file_contents_task7.png)
