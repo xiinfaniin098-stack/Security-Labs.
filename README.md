@@ -21,13 +21,12 @@ Welcome to my security portfolio. This repository documents my hands-on technica
 * *Folder:* [Course_5](./Course_5)
 * *Skills:* Symmetric encryption, Caesar ciphers, OpenSSL.
 
-🚨 4. Detection & Incident Response (Course 6)
-• Objective: Network traffic monitoring, SIEM log analysis, and incident response.
-• Folder: [Course_6](./Course_6)
-• Skills: Incident handling, network analysis, IDS logs, SIEM tools.
+### 🚨 4. Detection & Incident Response (Course 6)
+* **Objective:** Network traffic monitoring, SIEM log analysis, and incident response.
+* **Folder:** [Course_6](./Course_6)
+* **Skills:** Incident handling, network analysis, IDS logs, SIEM tools.
 
 ### 🐍 5. Automating Cybersecurity Tasks with Python (Course 7)
 * **Objective:** Developing Python algorithms to parse security log files, check device IDs, and manage IP allow lists.
 * **Folder:** [Course_7](./Course_7)
 * **Skills:** File I/O (`with open()`), String parsing (`.split()`), List manipulation (`.remove()`), and Conditional statements.
-*
