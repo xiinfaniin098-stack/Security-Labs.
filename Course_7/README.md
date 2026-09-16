@@ -1,4 +1,4 @@
-# Course 7: Automating Cybersecurity Tasks with Python
+
 # Course 7: Automating Cybersecurity Tasks with Python
 
 Welcome to the Python automation module documentation. This page details hands-on algorithms written to parse log files, verify user authorization, and update IP allow lists.
